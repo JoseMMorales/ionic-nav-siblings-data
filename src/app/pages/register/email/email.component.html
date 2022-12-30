@@ -56,8 +56,17 @@
     <ion-button
       type="submit"
       class="submit"
+      [disabled]="fullForm.invalid"
     >
       Get Full Form
     </ion-button>
   </form>
+
+  <ng-container *ngIf="formObj">
+    <app-ion-modal
+      [isModalOpen]="isModalOpen$.value"
+      [formObj]="formObj"
+      (modelBooleanEvent)="setModalClose($event)"
+    ></app-ion-modal>
+  </ng-container>
 </ion-content>

@@ -10,6 +10,7 @@ import { AddressComponent } from './pages/register/address/address.component';
 import { EmailComponent } from './pages/register/email/email.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SignComponent } from './pages/sign/sign.component';
+import { IonModalComponent } from './pages/register/email/components/ion-modal/ion-modal.component';
 
 @NgModule({
   imports: [
@@ -25,6 +26,7 @@ import { SignComponent } from './pages/sign/sign.component';
     PersonalComponent,
     AddressComponent,
     EmailComponent,
+    IonModalComponent,
   ],
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA],

@@ -1,7 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Subscription } from 'rxjs';
+import { BehaviorSubject, Subscription } from 'rxjs';
+
 import { DataService } from 'src/app/shared/service/data/data.service';
+import { FormObj } from './models/formData.interface';
 
 @Component({
   selector: 'app-email',
@@ -11,6 +13,8 @@ import { DataService } from 'src/app/shared/service/data/data.service';
 export class EmailComponent implements OnInit, OnDestroy {
   subscription!: Subscription;
   fullForm!: FormGroup;
+  formObj!: FormObj;
+  isModalOpen$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
   constructor(
     private formBuilder: FormBuilder,
@@ -27,7 +31,12 @@ export class EmailComponent implements OnInit, OnDestroy {
   }
 
   submitFullForm(): void {
-    console.log(this.fullForm.getRawValue());
+    this.formObj = this.fullForm.getRawValue();
+    this.isModalOpen$.next(true);
+  }
+
+  setModalClose(booleanValue: boolean): void {
+    this.isModalOpen$.next(booleanValue);
   }
 
   private initForm(): void {
