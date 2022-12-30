@@ -7,9 +7,11 @@
 ### Customizing ionic components
 
 - <b>ion-nav-link component</b> which has been wrapped up with a dynamic div to make it not clickable for the user while form is not active. This component is re-used in each form to make the magic happens when user wants to go forward in the App.
+
   <img width="75%" alt="Capture" src="https://user-images.githubusercontent.com/43299285/210065974-28698840-ef40-4778-8ef4-384ce10ee12e.PNG">
 
 - <b>ion-modal component</b> where final form is rendered with data set in all views by the user. This is just in use in a specific component(email component) so methods and data are linked using `Input()`, `Output()` Decorators for transferring/detect data changing and modify the DOM.
+
   <img width="75%" alt="Capture" src="https://user-images.githubusercontent.com/43299285/210067431-9b8bc3f5-be68-4ff7-8c67-46a6d3c1519f.PNG">
 
 ### Sharing Data between siblings
