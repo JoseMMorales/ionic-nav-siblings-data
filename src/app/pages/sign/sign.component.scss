@@ -1,0 +1,13 @@
+@import "../../../global.scss";
+
+ion-col {
+  ion-button.sign-button {
+    @extend %margin-top-button-space;
+  }
+}
+
+.small-text {
+  display: block;
+  text-align: center;
+  @extend %margin-top-button-space;
+}

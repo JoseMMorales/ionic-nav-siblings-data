@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Email</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <form
+    [formGroup]="fullForm"
+    (ngSubmit)="submitFullForm()"
+  >
+    <ion-item lines="full">
+      <ion-label position="floating">Name</ion-label>
+      <ion-input
+        type="text"
+        formControlName="name"
+      ></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Surname</ion-label>
+      <ion-input
+        type="text"
+        formControlName="surname"
+      ></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Address</ion-label>
+      <ion-input
+        type="text"
+        formControlName="address"
+      ></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Apartment, suite, etc</ion-label>
+      <ion-input
+        type="text"
+        formControlName="apartment"
+      ></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input
+        type="email"
+        formControlName="email"
+      ></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Confirm Email</ion-label>
+      <ion-input
+        type="email"
+        formControlName="confirmEmail"
+      ></ion-input>
+    </ion-item>
+    <ion-button
+      type="submit"
+      class="submit"
+    >
+      Get Full Form
+    </ion-button>
+  </form>
+</ion-content>

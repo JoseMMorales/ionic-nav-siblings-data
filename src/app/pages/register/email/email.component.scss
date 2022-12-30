@@ -1,0 +1,5 @@
+@import "../../../../global.scss";
+
+.submit {
+  @extend %margin-top-button-space;
+}

@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Personal Information</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <form
+    [formGroup]="personalForm"
+    (ngSubmit)="submitPersonalForm()"
+  >
+    <ion-item lines="full">
+      <ion-label position="floating">Name</ion-label>
+      <ion-input
+        type="text"
+        formControlName="name"
+      ></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Surname</ion-label>
+      <ion-input
+        type="text"
+        formControlName="surname"
+      ></ion-input>
+    </ion-item>
+    <app-ion-nav-link
+      [buttonText]="textButton"
+      [form]="personalForm"
+      [component]="component"
+    ></app-ion-nav-link>
+  </form>
+</ion-content>
