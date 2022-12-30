@@ -1,4 +1,4 @@
-![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white) ![Ionic](https://img.shields.io/badge/Ionic-%233880FF.svg?style=for-the-badge&logo=Ionic&logoColor=white) ![RxJS](https://img.shields.io/badge/rxjs-%23B7178C.svg?style=for-the-badge&logo=reactivex&logoColor=white) ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white) ![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white) ![Ionic](https://img.shields.io/badge/Ionic-%233880FF.svg?style=for-the-badge&logo=Ionic&logoColor=white) ![RxJS](https://img.shields.io/badge/rxjs-%23B7178C.svg?style=for-the-badge&logo=reactivex&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white) ![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
 
 ## Ion-nav-project
 
@@ -6,16 +6,19 @@
 
 ### Customizing ionic components
 
-| <b>ion-nav-link component</b> which has been wrapped up with a dynamic div to make it not clickable for the user while form is not active. This component is re-used in each form to make the magic happens when user wants to go forward in the App. | <b>ion-modal component</b> where final form is rendered with data set in all views by the user. This is just in use in a specific component(email component) so methods and data are linked using `Input()`, `Output()` Decorators for transferring/detect data changing and modify the DOM. |
-| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|                                                     <img width="100%" alt="Capture" src="https://user-images.githubusercontent.com/43299285/210065974-28698840-ef40-4778-8ef4-384ce10ee12e.PNG">                                                      |                                                                         <img width="100%" alt="Capture" src="https://user-images.githubusercontent.com/43299285/210067431-9b8bc3f5-be68-4ff7-8c67-46a6d3c1519f.PNG">                                                                         |
+- <b>ion-nav-link component</b> which has been wrapped up with a dynamic div to make it not clickable for the user while form is not active. This component is re-used in each form to make the magic happens when user wants to go forward in the App.
+
+ <img width="75%" alt="Capture" src="https://user-images.githubusercontent.com/43299285/210065974-28698840-ef40-4778-8ef4-384ce10ee12e.PNG">
+
+- <b>ion-modal component</b> where final form is rendered with data set in all views by the user. This is just in use in a specific component(email component) so methods and data are linked using `Input()`, `Output()` Decorators for transferring/detect data changing and modify the DOM.
+  <img width="75%" alt="Capture" src="https://user-images.githubusercontent.com/43299285/210067431-9b8bc3f5-be68-4ff7-8c67-46a6d3c1519f.PNG">
 
 ### Sharing Data between siblings
 
 Data service where a Subject([BehaviorSubject](https://www.learnrxjs.io/learn-rxjs/subjects/behaviorsubject)) is set with registering values when user submit a form in each view of the App. Then, the data is stored asObservable in a global variable, being able to get back those values from any level needed.
 
 <div align="center">
-  <img width="389" alt="Capture" src="https://user-images.githubusercontent.com/43299285/210065226-8d6c3e9a-29b1-44f5-8831-61f92337c1a4.PNG">
+  <img width="489" alt="Capture" src="https://user-images.githubusercontent.com/43299285/210065226-8d6c3e9a-29b1-44f5-8831-61f92337c1a4.PNG">
 </div>
 
 ### Technology
