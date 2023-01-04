@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonNavLinkComponent } from './components/ion-nav-link/ion-nav-link.component';
 import { DataService } from './service/data/data.service';
+import { IonLoaderService } from './service/loader/ion-loader.service';
 
 @NgModule({
   imports: [CommonModule, ReactiveFormsModule],
@@ -14,7 +15,7 @@ import { DataService } from './service/data/data.service';
     IonNavLinkComponent,
     ReactiveFormsModule,
   ],
-  providers: [DataService],
+  providers: [DataService, IonLoaderService],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class SharedModule {}

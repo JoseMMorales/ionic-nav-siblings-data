@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Subscription } from 'rxjs';
 
 import { DataService } from 'src/app/shared/service/data/data.service';
+import { IonLoaderService } from 'src/app/shared/service/loader/ion-loader.service';
 import { EmailComponent } from '../email/email.component';
 
 @Component({
@@ -18,7 +19,8 @@ export class AddressComponent implements OnInit, OnDestroy {
 
   constructor(
     private formBuilder: FormBuilder,
-    private dataService: DataService
+    private dataService: DataService,
+    private ionLoaderService: IonLoaderService
   ) {}
 
   ngOnInit(): void {
@@ -48,11 +50,17 @@ export class AddressComponent implements OnInit, OnDestroy {
   }
 
   private setFormFields(): void {
-    this.subscription = this.dataService.getData().subscribe((data) => {
-      this.addressForm.patchValue({
-        name: data.name,
-        surname: data.surname,
-      });
+    this.subscription = this.dataService.getData().subscribe({
+      next: (data) => {
+        this.ionLoaderService.presentLoader();
+        this.addressForm.patchValue({
+          name: data.name,
+          surname: data.surname,
+        });
+        this.ionLoaderService.dismissLoader();
+      },
+      error: (error) => console.log('Error: ' + error),
+      complete: () => console.log('Completed!'),
     });
   }
 }
